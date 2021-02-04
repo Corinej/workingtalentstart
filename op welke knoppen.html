@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script>
+
+var tekstlog = " "
+
+function klikkenA(){
+var tekstA = "U heeft op knop A gedrukt <br>";
+tekstlog = tekstlog.concat(tekstA);
+console.log(tekstlog)
+document.getElementById("resultaat").innerHTML = tekstlog;
+}
+
+
+
+function klikkenB(){
+var tekstB =  "U heeft op knop B gedrukt <br>";
+tekstlog = tekstlog.concat(tekstB);
+document.getElementById("resultaat").innerHTML = tekstlog
+
+}
+
+
+function klikkenC(){
+var tekstC =  "U heeft op knop C gedrukt <br>";
+tekstlog = tekstlog.concat(tekstC);
+document.getElementById("resultaat").innerHTML = tekstlog
+
+}
+
+
+function klikkenD(){
+var tekstD =  "U heeft op knop D gedrukt <br>";
+tekstlog = tekstlog.concat(tekstD);
+document.getElementById("resultaat").innerHTML = tekstlog
+
+}
+
+
+
+
+        </script>
+    </head>
+    <body>
+        <input type="button" id="A" value="A" onclick="klikkenA()">
+        <input type="button" id="B" value="B" onclick="klikkenB()">
+        <input type="button" id="C" value="C" onclick="klikkenC()">
+        <input type="button" id="D" value="D" onclick="klikkenD()">
+
+        <div id="resultaat"></div>
+    </body>
+</html>

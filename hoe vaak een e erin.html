@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+function checken(){
+    var woord = document.getElementById("invoer").value;
+    var aantal = 0;
+    for(var r = 0; r < woord.length; r++){
+        var woordnummer = woord.charAt(r);
+        if(woordnummer.includes("e")){
+            aantal = aantal + 1
+        }else{
+            aantal = aantal + 0
+        }
+    }
+    alert(aantal)
+
+}
+
+        </script>
+    </head>
+    <body>
+        <input type=text id="invoer" value="Vul een woord in">
+        <input type=button onclick="checken()">
+    </body>
+</html>
+
+
+
