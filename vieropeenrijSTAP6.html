@@ -1,0 +1,818 @@
+
+
+
+
+<html></html>
+<head>
+  <style>
+    .kolom{
+      background-color: rgb(255, 255, 255);
+      display: inline-block;
+      width: 95px;
+      height: 550px;
+    }
+    .blokje{
+        background-color: rgb(255, 255, 255);
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      border-style: ridge;
+      border: 2px solid rgb(27, 13, 13);
+      border-radius: 12px;
+    }
+    .veld{
+        background-color: cadetblue;
+        display: inline-block;
+        width: 690px;
+        height: 550px;
+        border: 2px solid;
+    }
+    div.kolom:hover{ background-color:cadetblue}
+  </style>
+  <script>
+
+      // masks per kolom, laatste cijfer in de array is een klikcounter
+      // masks per rij
+
+      var K1mask
+      var K1mask = [0,0,0,0,0,0,0];
+
+      var K2mask
+      var K2mask = [0,0,0,0,0,0,0];
+      
+      var K3mask
+      var K3mask = [0,0,0,0,0,0,0];
+      
+      var K4mask
+      var K4mask = [0,0,0,0,0,0,0];
+      
+      var K5mask
+      var K5mask = [0,0,0,0,0,0,0];
+      
+      var K6mask
+      var K6mask = [0,0,0,0,0,0,0];
+
+      var K7mask
+      var K7mask = [0,0,0,0,0,0,0];
+
+      var R1mask
+      var R1mask = [0,0,0,0,0,0,0];
+      
+      var R2mask
+      var R2mask = [0,0,0,0,0,0,0];
+      
+      var R3mask
+      var R3mask = [0,0,0,0,0,0,0];
+      
+      var R4mask
+      var R4mask = [0,0,0,0,0,0,0];
+
+      var R5mask
+      var R5mask = [0,0,0,0,0,0,0];
+
+      var R6mask
+      var R6mask = [0,0,0,0,0,0,0];
+
+      var R7mask
+      var R7mask = [0,0,0,0,0,0,0];
+
+console.log(K1mask)
+
+var player1 = 1
+
+
+
+// de alert werkt gek genoeg niet bij de rode speler, ik heb niet kunnen vinden waarom
+
+
+function klikK1(){
+    if(player1 == 1){
+       if(K1mask[6] == 0){
+          document.getElementById("K1B6").style.backgroundColor = 'yellow';
+          K1mask[5] = 1; 
+          K1mask[6] = 1;
+          R1mask[0] = 1;
+          if(R1mask[0] == R1mask[1] == R1mask[2] == R1mask[3]){
+              alert('Geel wint!')
+          }
+          player1 = player1 + 1          
+          console.log(K1mask)
+       }else if(K1mask[6] ==1){
+           document.getElementById("K1B5").style.backgroundColor = 'yellow';
+           K1mask[4] = 1;
+           K1mask[6] = 2;
+           R2mask[0] = 1;
+           if(R2mask[0] == R2mask[1] == R2mask[2] == R2mask[3]){
+               alert('Geel wint!')
+           }
+           player1 = player1 + 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==2){
+        document.getElementById("K1B4").style.backgroundColor = 'yellow';
+           K1mask[3] = 1;
+           K1mask[6] =3;
+           R3mask[0] = 1;
+           if(R3mask[0] == R3mask[1] == R3mask[2] == R3mask[3]){
+               alert('Geel wint!')
+           }
+           player1 = player1 + 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==3){
+           document.getElementById("K1B3").style.backgroundColor = 'yellow';
+           K1mask[2] = 1;
+           K1mask[6] =4;
+           R4mask[0] = 1;
+           if(K1mask[2] == K1mask[3] == K1mask[4] == K1mask[5]){
+               alert('Geel wint!')
+           }
+           if(R4mask[0] == R4mask[1] == R4mask[2] == R4mask[3]){
+               alert('Geel wint!')
+           }
+           player1 = player1 + 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==4){
+           document.getElementById("K1B2").style.backgroundColor = 'yellow';
+           K1mask[1] = 1;
+           K1mask[6] = 5;
+           R5mask[0] = 1;
+           if(K1mask[1] == K1mask[2] == K1mask[3] == K1mask[4]){
+               alert('Geel wint!')
+           }
+           if(R5mask[0] == R5mask[1] == R5mask[2] == R5mask[3]){
+               alert('Geel wint!')
+           }
+           player1 = player1 + 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==5){
+           document.getElementById("K1B1").style.backgroundColor = 'yellow';
+           K1mask[0] = 1;
+           K1mask[6] = 6;
+           R6mask[0] = 1;
+           if(R6mask[0] == R6mask[1] == R6mask[2] == R6mask[3]){
+               alert('Geel wint!')
+           }
+           if(K1mask[0] == K1mask[1] == K1mask[2] == K1mask[3]){
+               alert('Geel wint!')
+           }
+           player1 = player1 + 1 
+           console.log(K1mask)
+       }
+    }else if(player1 == 2){
+        if(K1mask[6] == 0){
+          document.getElementById("K1B6").style.backgroundColor = 'red';
+          K1mask[5] = 10; 
+          K1mask[6] = 1;
+          R1mask[0] = 10;
+          if(R1mask[0] == R1mask[1] == R1mask[2] == R1mask[3]){
+              alert('Rood wint!')
+          }
+          player1 = player1 - 1          
+          console.log(K1mask)
+       }else if(K1mask[6] ==1){
+           document.getElementById("K1B5").style.backgroundColor = 'red';
+           K1mask[4] = 10;
+           K1mask[6] = 2;
+           R2mask[0] = 10;
+          if(R2mask[0] == R2mask[1] == R2mask[2] == R2mask[3]){
+              alert('Rood wint!')
+          }
+           player1 = player1 - 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==2){
+        document.getElementById("K1B4").style.backgroundColor = 'red';
+           K1mask[3] = 10;
+           K1mask[6] =3;
+           R3mask[0] = 10;
+          if(R3mask[0] == R3mask[1] == R3mask[2] == R3mask[3]){
+              alert('Rood wint!')
+          }
+           player1 = player1 - 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==3){
+           document.getElementById("K1B3").style.backgroundColor = 'red';
+           K1mask[2] = 10;
+           K1mask[6] =4;
+           R4mask[0] = 10;
+          if(R4mask[0] == R4mask[1] == R4mask[2] == R4mask[3]){
+              alert('Rood wint!')
+          }
+          if(K1mask[2] == K1mask[3] == K1mask[4] == K1mask[5]){
+               alert('Rood wint!')
+            }
+           player1 = player1 - 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==4){
+           document.getElementById("K1B2").style.backgroundColor = 'red';
+           K1mask[1] = 10;
+           K1mask[6] = 5;
+           R5mask[0] = 10;
+           if(R5mask[0] == R5mask[1] == R5mask[2] == R5mask[3]){
+              alert('Rood wint!')
+          }
+          if(K1mask[1] == K1mask[2] == K1mask[3] == K1mask[4]){
+               alert('Rood wint!')
+           }
+           player1 = player1 - 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==5){
+           document.getElementById("K1B1").style.backgroundColor = 'red';
+           K1mask[0] = 10;
+           K1mask[6] = 6;
+           R6mask[0] = 10;
+           if(R6mask[0] == R6mask[1] == R6mask[2] == R6mask[3]){
+               alert('Rood wint!')
+           }
+           if(K1mask[0] == K1mask[1] == K1mask[2] == K1mask[3]){
+               alert('Rood wint!')
+           }
+           player1 = player1 - 1 
+           console.log(K1mask)
+       }
+    }
+    }
+
+    function klikK2(){
+    if(player1 == 1){
+       if(K2mask[6] == 0){
+          document.getElementById("K2B6").style.backgroundColor = 'yellow';
+          K2mask[5] = 1; 
+          K2mask[6] = 1;
+          player1 = player1 + 1          
+          console.log(K2mask)
+       }else if(K2mask[6] ==1){
+           document.getElementById("K2B5").style.backgroundColor = 'yellow';
+           K2mask[4] = 1;
+           K2mask[6] = 2;
+           player1 = player1 + 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==2){
+        document.getElementById("K2B4").style.backgroundColor = 'yellow';
+           K2mask[3] = 1;
+           K2mask[6] =3;
+           player1 = player1 + 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==3){
+           document.getElementById("K2B3").style.backgroundColor = 'yellow';
+           K2mask[2] = 1;
+           K2mask[6] =4;
+           player1 = player1 + 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==4){
+           document.getElementById("K2B2").style.backgroundColor = 'yellow';
+           K2mask[1] = 1;
+           K2mask[6] = 5;
+           player1 = player1 + 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==5){
+           document.getElementById("K2B1").style.backgroundColor = 'yellow';
+           K2mask[0] = 1;
+           K2mask[6] = 6;
+           player1 = player1 + 1 
+           console.log(K2mask)
+       }
+    }else if(player1 == 2){
+        if(K2mask[6] == 0){
+          document.getElementById("K2B6").style.backgroundColor = 'red';
+          K2mask[5] = 10; 
+          K2mask[6] = 1;
+          player1 = player1 - 1          
+          console.log(K2mask)
+       }else if(K2mask[6] ==1){
+           document.getElementById("K2B5").style.backgroundColor = 'red';
+           K2mask[4] = 10;
+           K2mask[6] = 2;
+           player1 = player1 - 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==2){
+        document.getElementById("K2B4").style.backgroundColor = 'red';
+           K2mask[3] = 10;
+           K2mask[6] =3;
+           player1 = player1 - 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==3){
+           document.getElementById("K2B3").style.backgroundColor = 'red';
+           K2mask[2] = 10;
+           K2mask[6] =4;
+           player1 = player1 - 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==4){
+           document.getElementById("K2B2").style.backgroundColor = 'red';
+           K2mask[1] = 10;
+           K2mask[6] = 5;
+           player1 = player1 - 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==5){
+           document.getElementById("K2B1").style.backgroundColor = 'red';
+           K2mask[0] = 10;
+           K2mask[6] = 6;
+           player1 = player1 - 1 
+           console.log(K2mask)
+       }
+    }
+    }
+  
+    function klikK3(){
+    if(player1 == 1){
+       if(K3mask[6] == 0){
+          document.getElementById("K3B6").style.backgroundColor = 'yellow';
+          K3mask[5] = 1; 
+          K3mask[6] = 1;
+          player1 = player1 + 1          
+          console.log(K3mask)
+       }else if(K3mask[6] ==1){
+           document.getElementById("K3B5").style.backgroundColor = 'yellow';
+           K3mask[4] = 1;
+           K3mask[6] = 2;
+           player1 = player1 + 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==2){
+        document.getElementById("K3B4").style.backgroundColor = 'yellow';
+           K3mask[3] = 1;
+           K3mask[6] =3;
+           player1 = player1 + 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==3){
+           document.getElementById("K3B3").style.backgroundColor = 'yellow';
+           K3mask[2] = 1;
+           K3mask[6] =4;
+           player1 = player1 + 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==4){
+           document.getElementById("K3B2").style.backgroundColor = 'yellow';
+           K3mask[1] = 1;
+           K3mask[6] = 5;
+           player1 = player1 + 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==5){
+           document.getElementById("K3B1").style.backgroundColor = 'yellow';
+           K3mask[0] = 1;
+           K3mask[6] = 6;
+           player1 = player1 + 1 
+           console.log(K3mask)
+       }
+    }else if(player1 == 2){
+        if(K3mask[6] == 0){
+          document.getElementById("K3B6").style.backgroundColor = 'red';
+          K3mask[5] = 10; 
+          K3mask[6] = 1;
+          player1 = player1 - 1          
+          console.log(K3mask)
+       }else if(K3mask[6] ==1){
+           document.getElementById("K3B5").style.backgroundColor = 'red';
+           K3mask[4] = 10;
+           K3mask[6] = 2;
+           player1 = player1 - 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==2){
+        document.getElementById("K3B4").style.backgroundColor = 'red';
+           K3mask[3] = 10;
+           K3mask[6] =3;
+           player1 = player1 - 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==3){
+           document.getElementById("K3B3").style.backgroundColor = 'red';
+           K3mask[2] = 10;
+           K3mask[6] =4;
+           player1 = player1 - 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==4){
+           document.getElementById("K3B2").style.backgroundColor = 'red';
+           K3mask[1] = 10;
+           K3mask[6] = 5;
+           player1 = player1 - 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==5){
+           document.getElementById("K3B1").style.backgroundColor = 'red';
+           K3mask[0] = 10;
+           K3mask[6] = 6;
+           player1 = player1 - 1 
+           console.log(K3mask)
+       }
+    }
+    }
+
+
+
+function klikK4(){
+    if(player1 == 1){
+       if(K4mask[6] == 0){
+          document.getElementById("K4B6").style.backgroundColor = 'yellow';
+          K4mask[5] = 1; 
+          K4mask[6] = 1;
+          player1 = player1 + 1          
+          console.log(K4mask)
+       }else if(K4mask[6] ==1){
+           document.getElementById("K4B5").style.backgroundColor = 'yellow';
+           K4mask[4] = 1;
+           K4mask[6] = 2;
+           player1 = player1 + 1 
+           console.log(K4mask)
+       }else if(K4mask[6] ==2){
+        document.getElementById("K4B4").style.backgroundColor = 'yellow';
+           K4mask[3] = 1;
+           K4mask[6] =3;
+           player1 = player1 + 1 
+           console.log(K4mask)
+       }else if(K4mask[6] ==3){
+           document.getElementById("K4B3").style.backgroundColor = 'yellow';
+           K4mask[2] = 1;
+           K4mask[6] =4;
+           player1 = player1 + 1 
+           console.log(K4mask)
+       }else if(K4mask[6] ==4){
+           document.getElementById("K4B2").style.backgroundColor = 'yellow';
+           K4mask[1] = 1;
+           K4mask[6] = 5;
+           player1 = player1 + 1 
+           console.log(K4mask)
+       }else if(K4mask[6] ==5){
+           document.getElementById("K4B1").style.backgroundColor = 'yellow';
+           K4mask[0] = 1;
+           K4mask[6] = 6;
+           player1 = player1 + 1 
+           console.log(K4mask)
+       }
+    }else if(player1 == 2){
+        if(K4mask[6] == 0){
+          document.getElementById("K4B6").style.backgroundColor = 'red';
+          K4mask[5] = 10; 
+          K4mask[6] = 1;
+          player1 = player1 - 1          
+          console.log(K4mask)
+       }else if(K4mask[6] ==1){
+           document.getElementById("K4B5").style.backgroundColor = 'red';
+           K4mask[4] = 10;
+           K4mask[6] = 2;
+           player1 = player1 - 1 
+           console.log(K4mask)
+       }else if(K4mask[6] ==2){
+        document.getElementById("K4B4").style.backgroundColor = 'red';
+           K4mask[3] = 10;
+           K4mask[6] =3;
+           player1 = player1 - 1 
+           console.log(K4mask)
+       }else if(K4mask[6] ==3){
+           document.getElementById("K4B3").style.backgroundColor = 'red';
+           K4mask[2] = 10;
+           K4mask[6] =4;
+           player1 = player1 - 1 
+           console.log(K4mask)
+       }else if(K4mask[6] ==4){
+           document.getElementById("K4B2").style.backgroundColor = 'red';
+           K4mask[1] = 10;
+           K4mask[6] = 5;
+           player1 = player1 - 1 
+           console.log(K4mask)
+       }else if(K4mask[6] ==5){
+           document.getElementById("K4B1").style.backgroundColor = 'red';
+           K4mask[0] = 10;
+           K4mask[6] = 6;
+           player1 = player1 - 1 
+           console.log(K4mask)
+       }
+    } 
+}
+
+
+
+function klikK5(){
+    if(player1 == 1){
+       if(K5mask[6] == 0){
+          document.getElementById("K5B6").style.backgroundColor = 'yellow';
+          K5mask[5] = 1; 
+          K5mask[6] = 1;
+          player1 = player1 + 1          
+          console.log(K5mask)
+       }else if(K5mask[6] ==1){
+           document.getElementById("K5B5").style.backgroundColor = 'yellow';
+           K5mask[4] = 1;
+           K5mask[6] = 2;
+           player1 = player1 + 1 
+           console.log(K5mask)
+       }else if(K5mask[6] ==2){
+        document.getElementById("K5B4").style.backgroundColor = 'yellow';
+           K5mask[3] = 1;
+           K5mask[6] =3;
+           player1 = player1 + 1 
+           console.log(K5mask)
+       }else if(K5mask[6] ==3){
+           document.getElementById("K5B3").style.backgroundColor = 'yellow';
+           K5mask[2] = 1;
+           K5mask[6] =4;
+           player1 = player1 + 1 
+           console.log(K5mask)
+       }else if(K5mask[6] ==4){
+           document.getElementById("K5B2").style.backgroundColor = 'yellow';
+           K5mask[1] = 1;
+           K5mask[6] = 5;
+           player1 = player1 + 1 
+           console.log(K5mask)
+       }else if(K5mask[6] ==5){
+           document.getElementById("K5B1").style.backgroundColor = 'yellow';
+           K5mask[0] = 1;
+           K5mask[6] = 6;
+           player1 = player1 + 1 
+           console.log(K5mask)
+       }
+    }else if(player1 == 2){
+        if(K5mask[6] == 0){
+          document.getElementById("K5B6").style.backgroundColor = 'red';
+          K5mask[5] = 10; 
+          K5mask[6] = 1;
+          player1 = player1 - 1          
+          console.log(K5mask)
+       }else if(K5mask[6] ==1){
+           document.getElementById("K5B5").style.backgroundColor = 'red';
+           K5mask[4] = 10;
+           K5mask[6] = 2;
+           player1 = player1 - 1 
+           console.log(K5mask)
+       }else if(K5mask[6] ==2){
+        document.getElementById("K5B4").style.backgroundColor = 'red';
+           K5mask[3] = 10;
+           K5mask[6] =3;
+           player1 = player1 - 1 
+           console.log(K5mask)
+       }else if(K5mask[6] ==3){
+           document.getElementById("K5B3").style.backgroundColor = 'red';
+           K5mask[2] = 10;
+           K5mask[6] =4;
+           player1 = player1 - 1 
+           console.log(K5mask)
+       }else if(K5mask[6] ==4){
+           document.getElementById("K5B2").style.backgroundColor = 'red';
+           K5mask[1] = 10;
+           K5mask[6] = 5;
+           player1 = player1 - 1 
+           console.log(K5mask)
+       }else if(K5mask[6] ==5){
+           document.getElementById("K5B1").style.backgroundColor = 'red';
+           K5mask[0] = 10;
+           K5mask[6] = 6;
+           player1 = player1 - 1 
+           console.log(K5mask)
+       }
+    } 
+}
+
+
+
+function klikK6(){
+    if(player1 == 1){
+       if(K6mask[6] == 0){
+          document.getElementById("K6B6").style.backgroundColor = 'yellow';
+          K6mask[5] = 1; 
+          K6mask[6] = 1;
+          player1 = player1 + 1          
+          console.log(K6mask)
+       }else if(K6mask[6] ==1){
+           document.getElementById("K6B5").style.backgroundColor = 'yellow';
+           K6mask[4] = 1;
+           K6mask[6] = 2;
+           player1 = player1 + 1 
+           console.log(K6mask)
+       }else if(K6mask[6] ==2){
+        document.getElementById("K6B4").style.backgroundColor = 'yellow';
+           K6mask[3] = 1;
+           K6mask[6] =3;
+           player1 = player1 + 1 
+           console.log(K6mask)
+       }else if(K6mask[6] ==3){
+           document.getElementById("K6B3").style.backgroundColor = 'yellow';
+           K6mask[2] = 1;
+           K6mask[6] =4;
+           player1 = player1 + 1 
+           console.log(K6mask)
+       }else if(K6mask[6] ==4){
+           document.getElementById("K6B2").style.backgroundColor = 'yellow';
+           K6mask[1] = 1;
+           K6mask[6] = 5;
+           player1 = player1 + 1 
+           console.log(K6mask)
+       }else if(K6mask[6] ==5){
+           document.getElementById("K6B1").style.backgroundColor = 'yellow';
+           K6mask[0] = 1;
+           K6mask[6] = 6;
+           player1 = player1 + 1 
+           console.log(K6mask)
+       }
+    }else if(player1 == 2){
+        if(K6mask[6] == 0){
+          document.getElementById("K6B6").style.backgroundColor = 'red';
+          K6mask[5] = 10; 
+          K6mask[6] = 1;
+          player1 = player1 - 1          
+          console.log(K6mask)
+       }else if(K6mask[6] ==1){
+           document.getElementById("K6B5").style.backgroundColor = 'red';
+           K6mask[4] = 10;
+           K6mask[6] = 2;
+           player1 = player1 - 1 
+           console.log(K6mask)
+       }else if(K6mask[6] ==2){
+        document.getElementById("K6B4").style.backgroundColor = 'red';
+           K6mask[3] = 10;
+           K6mask[6] =3;
+           player1 = player1 - 1 
+           console.log(K6mask)
+       }else if(K6mask[6] ==3){
+           document.getElementById("K6B3").style.backgroundColor = 'red';
+           K6mask[2] = 10;
+           K6mask[6] =4;
+           player1 = player1 - 1 
+           console.log(K6mask)
+       }else if(K6mask[6] ==4){
+           document.getElementById("K6B2").style.backgroundColor = 'red';
+           K6mask[1] = 10;
+           K6mask[6] = 5;
+           player1 = player1 - 1 
+           console.log(K6mask)
+       }else if(K6mask[6] ==5){
+           document.getElementById("K6B1").style.backgroundColor = 'red';
+           K6mask[0] = 10;
+           K6mask[6] = 6;
+           player1 = player1 - 1 
+           console.log(K6mask)
+       }
+    } 
+}
+
+
+function klikK7(){
+    if(player1 == 1){
+       if(K7mask[6] == 0){
+          document.getElementById("K7B6").style.backgroundColor = 'yellow';
+          K7mask[5] = 1; 
+          K7mask[6] = 1;
+          player1 = player1 + 1          
+          console.log(K7mask)
+       }else if(K7mask[6] ==1){
+           document.getElementById("K7B5").style.backgroundColor = 'yellow';
+           K7mask[4] = 1;
+           K7mask[6] = 2;
+           player1 = player1 + 1 
+           console.log(K7mask)
+       }else if(K7mask[6] ==2){
+        document.getElementById("K7B4").style.backgroundColor = 'yellow';
+           K7mask[3] = 1;
+           K7mask[6] =3;
+           player1 = player1 + 1 
+           console.log(K7mask)
+       }else if(K7mask[6] ==3){
+           document.getElementById("K7B3").style.backgroundColor = 'yellow';
+           K7mask[2] = 1;
+           K7mask[6] =4;
+           player1 = player1 + 1 
+           console.log(K7mask)
+       }else if(K7mask[6] ==4){
+           document.getElementById("K7B2").style.backgroundColor = 'yellow';
+           K7mask[1] = 1;
+           K7mask[6] = 5;
+           player1 = player1 + 1 
+           console.log(K7mask)
+       }else if(K7mask[6] ==5){
+           document.getElementById("K7B1").style.backgroundColor = 'yellow';
+           K7mask[0] = 1;
+           K7mask[6] = 6;
+           player1 = player1 + 1 
+           console.log(K7mask)
+       }
+    }else if(player1 == 2){
+        if(K7mask[6] == 0){
+          document.getElementById("K7B6").style.backgroundColor = 'red';
+          K7mask[5] = 10; 
+          K7mask[6] = 1;
+          player1 = player1 - 1          
+          console.log(K7mask)
+       }else if(K7mask[6] ==1){
+           document.getElementById("K7B5").style.backgroundColor = 'red';
+           K7mask[4] = 10;
+           K7mask[6] = 2;
+           player1 = player1 - 1 
+           console.log(K7mask)
+       }else if(K7mask[6] ==2){
+        document.getElementById("K7B4").style.backgroundColor = 'red';
+           K7mask[3] = 10;
+           K7mask[6] =3;
+           player1 = player1 - 1 
+           console.log(K7mask)
+       }else if(K7mask[6] ==3){
+           document.getElementById("K7B3").style.backgroundColor = 'red';
+           K7mask[2] = 10;
+           K7mask[6] =4;
+           player1 = player1 - 1 
+           console.log(K7mask)
+       }else if(K7mask[6] ==4){
+           document.getElementById("K7B2").style.backgroundColor = 'red';
+           K7mask[1] = 10;
+           K7mask[6] = 5;
+           player1 = player1 - 1 
+           console.log(K7mask)
+       }else if(K7mask[6] ==5){
+           document.getElementById("K7B1").style.backgroundColor = 'red';
+           K7mask[0] = 10;
+           K7mask[6] = 6;
+           player1 = player1 - 1 
+           console.log(K7mask)
+       }
+    } 
+}
+
+
+
+
+</script>
+
+</head>
+
+<body>
+    <p>Welkom bij 4 op een rij! <br>
+        Beweeg je muis over het speelveld om de verschillende kolommen te zien. Klik op een van de kolommen om daar een fiche in te stoppen. <br>
+        Dit spel is voor twee spelers: speler 1 is geel en speler 2 is rood. Ze spelen om en om. Geel begint. <br><br>
+        Succes!
+    </p>
+
+    <br>
+    <br>
+    <div class="veld">
+
+    <div class="kolom" id="K1" onclick="klikK1()">
+        <br>
+        <br>
+        <div class="blokje" id="K1B1"></div> <br>
+        <div class="blokje" id="K1B2"></div> <br>
+        <div class="blokje" id="K1B3"></div> <br>
+        <div class="blokje" id="K1B4"></div> <br>
+        <div class="blokje" id="K1B5"></div> <br>
+        <div class="blokje" id="K1B6"></div>
+    </div>
+
+    <div class="kolom" id="K2" onclick="klikK2()">
+        <br>
+        <br>
+        <div class="blokje" id="K2B1"></div> <br>
+        <div class="blokje" id="K2B2"></div> <br>
+        <div class="blokje" id="K2B3"></div> <br>
+        <div class="blokje" id="K2B4"></div> <br>
+        <div class="blokje" id="K2B5"></div> <br>
+        <div class="blokje" id="K2B6"></div>
+    </div>
+
+    <div class="kolom" id="K3" onclick="klikK3()">
+        <br>
+        <br>
+        <div class="blokje" id="K3B1"></div> <br>
+        <div class="blokje" id="K3B2"></div> <br>
+        <div class="blokje" id="K3B3"></div> <br>
+        <div class="blokje" id="K3B4"></div> <br>
+        <div class="blokje" id="K3B5"></div> <br>
+        <div class="blokje" id="K3B6"></div>
+    </div>
+
+    <div class="kolom" id="K4" onclick="klikK4()">
+        <br>
+        <br>
+        <div class="blokje" id="K4B1"></div> <br>
+        <div class="blokje" id="K4B2"></div> <br>
+        <div class="blokje" id="K4B3"></div> <br>
+        <div class="blokje" id="K4B4"></div> <br>
+        <div class="blokje" id="K4B5"></div> <br>
+        <div class="blokje" id="K4B6"></div>
+    </div>
+
+    <div class="kolom" id="K5" onclick="klikK5()">
+        <br>
+        <br>
+        <div class="blokje" id="K5B1"></div> <br>
+        <div class="blokje" id="K5B2"></div> <br>
+        <div class="blokje" id="K5B3"></div> <br>
+        <div class="blokje" id="K5B4"></div> <br>
+        <div class="blokje" id="K5B5"></div> <br>
+        <div class="blokje" id="K5B6"></div>
+    </div>
+
+    <div class="kolom" id="K6" onclick="klikK6()">
+        <br>
+        <br>
+        <div class="blokje" id="K6B1"></div> <br>
+        <div class="blokje" id="K6B2"></div> <br>
+        <div class="blokje" id="K6B3"></div> <br>
+        <div class="blokje" id="K6B4"></div> <br>
+        <div class="blokje" id="K6B5"></div> <br>
+        <div class="blokje" id="K6B6"></div>
+    </div>
+
+    <div class="kolom" id="K7" onclick="klikK7()">
+        <br>
+        <br>
+        <div class="blokje" id="K7B1"></div> <br>
+        <div class="blokje" id="K7B2"></div> <br>
+        <div class="blokje" id="K7B3"></div> <br>
+        <div class="blokje" id="K7B4"></div> <br>
+        <div class="blokje" id="K7B5"></div> <br>
+        <div class="blokje" id="K7B6"></div>
+    </div>
+</div>
+    
+</body>
+</html>      
