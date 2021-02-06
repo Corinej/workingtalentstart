@@ -23,14 +23,338 @@
     div.kolom:hover{ background-color: rgb(245, 174, 213)}
   </style>
   <script>
-   
+
+      // masks per kolom, laatste cijfer in de array is een klikcounter
+
+      var K1mask
+      var K1mask = [0,0,0,0,0,0,0];
+
+      var K2mask
+      var K2mask = [0,0,0,0,0,0,0];
+      
+      var K3mask
+      var K3mask = [0,0,0,0,0,0,0];
+      
+      var K4mask
+      var K4mask = [0,0,0,0,0,0,0];
+      
+      var K5mask
+      var K5mask = [0,0,0,0,0,0,0];
+      
+      var K6mask
+      var K6mask = [0,0,0,0,0,0,0];
+
+      var K7mask
+      var K7mask = [0,0,0,0,0,0,0];
+
+
+console.log(K1mask)
+
+var player1 = 1
+
+function klikK1(){
+    if(player1 == 1){
+       if(K1mask[6] == 0){
+          document.getElementById("K1B6").style.backgroundColor = 'yellow';
+          K1mask[5] = 1; 
+          K1mask[6] = 1;
+          player1 = player1 + 1          
+          console.log(K1mask)
+       }else if(K1mask[6] ==1){
+           document.getElementById("K1B5").style.backgroundColor = 'yellow';
+           K1mask[4] = 1;
+           K1mask[6] = 2;
+           player1 = player1 + 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==2){
+        document.getElementById("K1B4").style.backgroundColor = 'yellow';
+           K1mask[3] = 1;
+           K1mask[6] =3;
+           player1 = player1 + 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==3){
+           document.getElementById("K1B3").style.backgroundColor = 'yellow';
+           K1mask[2] = 1;
+           K1mask[6] =4;
+           player1 = player1 + 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==4){
+           document.getElementById("K1B2").style.backgroundColor = 'yellow';
+           K1mask[1] = 1;
+           K1mask[6] = 5;
+           player1 = player1 + 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==5){
+           document.getElementById("K1B1").style.backgroundColor = 'yellow';
+           K1mask[0] = 1;
+           K1mask[6] = 6;
+           player1 = player1 + 1 
+           console.log(K1mask)
+       }else if(K1mask[6] == 6){
+           alert("vol")
+        }
+    }else if(player1 == 2){
+        if(K1mask[6] == 0){
+          document.getElementById("K1B6").style.backgroundColor = 'red';
+          K1mask[5] = 10; 
+          K1mask[6] = 1;
+          player1 = player1 - 1          
+          console.log(K1mask)
+       }else if(K1mask[6] ==1){
+           document.getElementById("K1B5").style.backgroundColor = 'red';
+           K1mask[4] = 10;
+           K1mask[6] = 2;
+           player1 = player1 - 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==2){
+        document.getElementById("K1B4").style.backgroundColor = 'red';
+           K1mask[3] = 10;
+           K1mask[6] =3;
+           player1 = player1 - 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==3){
+           document.getElementById("K1B3").style.backgroundColor = 'red';
+           K1mask[2] = 10;
+           K1mask[6] =4;
+           player1 = player1 - 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==4){
+           document.getElementById("K1B2").style.backgroundColor = 'red';
+           K1mask[1] = 10;
+           K1mask[6] = 5;
+           player1 = player1 - 1 
+           console.log(K1mask)
+       }else if(K1mask[6] ==5){
+           document.getElementById("K1B1").style.backgroundColor = 'red';
+           K1mask[0] = 10;
+           K1mask[6] = 6;
+           player1 = player1 - 1 
+           console.log(K1mask)
+       }else if(K1mask[6] == 6){
+           alert("vol")
+       }
+    }
+    }
+
+    function klikK2(){
+    if(player1 == 1){
+       if(K2mask[6] == 0){
+          document.getElementById("K2B6").style.backgroundColor = 'yellow';
+          K2mask[5] = 1; 
+          K2mask[6] = 1;
+          player1 = player1 + 1          
+          console.log(K2mask)
+       }else if(K2mask[6] ==1){
+           document.getElementById("K2B5").style.backgroundColor = 'yellow';
+           K2mask[4] = 1;
+           K2mask[6] = 2;
+           player1 = player1 + 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==2){
+        document.getElementById("K2B4").style.backgroundColor = 'yellow';
+           K2mask[3] = 1;
+           K2mask[6] =3;
+           player1 = player1 + 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==3){
+           document.getElementById("K2B3").style.backgroundColor = 'yellow';
+           K2mask[2] = 1;
+           K2mask[6] =4;
+           player1 = player1 + 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==4){
+           document.getElementById("K2B2").style.backgroundColor = 'yellow';
+           K2mask[1] = 1;
+           K2mask[6] = 5;
+           player1 = player1 + 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==5){
+           document.getElementById("K2B1").style.backgroundColor = 'yellow';
+           K2mask[0] = 1;
+           K2mask[6] = 6;
+           player1 = player1 + 1 
+           console.log(K2mask)
+       }else if(K2mask[6] == 6){
+           alert("vol")
+        }
+    }else if(player1 == 2){
+        if(K2mask[6] == 0){
+          document.getElementById("K2B6").style.backgroundColor = 'red';
+          K2mask[5] = 10; 
+          K2mask[6] = 1;
+          player1 = player1 - 1          
+          console.log(K2mask)
+       }else if(K2mask[6] ==1){
+           document.getElementById("K2B5").style.backgroundColor = 'red';
+           K2mask[4] = 10;
+           K2mask[6] = 2;
+           player1 = player1 - 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==2){
+        document.getElementById("K2B4").style.backgroundColor = 'red';
+           K2mask[3] = 10;
+           K2mask[6] =3;
+           player1 = player1 - 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==3){
+           document.getElementById("K2B3").style.backgroundColor = 'red';
+           K2mask[2] = 10;
+           K2mask[6] =4;
+           player1 = player1 - 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==4){
+           document.getElementById("K2B2").style.backgroundColor = 'red';
+           K2mask[1] = 10;
+           K2mask[6] = 5;
+           player1 = player1 - 1 
+           console.log(K2mask)
+       }else if(K2mask[6] ==5){
+           document.getElementById("K2B1").style.backgroundColor = 'red';
+           K2mask[0] = 10;
+           K2mask[6] = 6;
+           player1 = player1 - 1 
+           console.log(K2mask)
+       }else if(K2mask[6] == 6){
+           alert("vol")
+       }
+    }
+    }
+  
+    function klikK3(){
+    if(player1 == 1){
+       if(K3mask[6] == 0){
+          document.getElementById("K3B6").style.backgroundColor = 'yellow';
+          K3mask[5] = 1; 
+          K3mask[6] = 1;
+          player1 = player1 + 1          
+          console.log(K3mask)
+       }else if(K3mask[6] ==1){
+           document.getElementById("K3B5").style.backgroundColor = 'yellow';
+           K3mask[4] = 1;
+           K3mask[6] = 2;
+           player1 = player1 + 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==2){
+        document.getElementById("K3B4").style.backgroundColor = 'yellow';
+           K3mask[3] = 1;
+           K3mask[6] =3;
+           player1 = player1 + 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==3){
+           document.getElementById("K3B3").style.backgroundColor = 'yellow';
+           K3mask[2] = 1;
+           K3mask[6] =4;
+           player1 = player1 + 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==4){
+           document.getElementById("K3B2").style.backgroundColor = 'yellow';
+           K3mask[1] = 1;
+           K3mask[6] = 5;
+           player1 = player1 + 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==5){
+           document.getElementById("K3B1").style.backgroundColor = 'yellow';
+           K3mask[0] = 1;
+           K3mask[6] = 6;
+           player1 = player1 + 1 
+           console.log(K3mask)
+       }else if(K3mask[6] == 6){
+           alert("vol")
+        }
+    }else if(player1 == 2){
+        if(K3mask[6] == 0){
+          document.getElementById("K3B6").style.backgroundColor = 'red';
+          K3mask[5] = 10; 
+          K3mask[6] = 1;
+          player1 = player1 - 1          
+          console.log(K3mask)
+       }else if(K3mask[6] ==1){
+           document.getElementById("K3B5").style.backgroundColor = 'red';
+           K3mask[4] = 10;
+           K3mask[6] = 2;
+           player1 = player1 - 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==2){
+        document.getElementById("K3B4").style.backgroundColor = 'red';
+           K3mask[3] = 10;
+           K3mask[6] =3;
+           player1 = player1 - 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==3){
+           document.getElementById("K3B3").style.backgroundColor = 'red';
+           K3mask[2] = 10;
+           K3mask[6] =4;
+           player1 = player1 - 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==4){
+           document.getElementById("K3B2").style.backgroundColor = 'red';
+           K3mask[1] = 10;
+           K3mask[6] = 5;
+           player1 = player1 - 1 
+           console.log(K3mask)
+       }else if(K3mask[6] ==5){
+           document.getElementById("K3B1").style.backgroundColor = 'red';
+           K3mask[0] = 10;
+           K3mask[6] = 6;
+           player1 = player1 - 1 
+           console.log(K3mask)
+       }else if(K3mask[6] == 6){
+           alert("vol")
+       }
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
+
 </head>
 
 <body>
+    <p>Welkom bij 4 op een rij! <br>
+        Beweeg je muis over het speelveld om de verschillende kolommen te zien. Klik op een van de kolommen om daar een fiche in te stoppen. <br>
+        Dit spel is voor twee spelers: speler 1 is geel en speler 2 is rood. Ze spelen om en om. Geel begint. <br><br>
+        Succes!
+    </p>
     <br>
     <br>
-    <div class="kolom" id="1">
+    <div class="kolom" id="K1" onclick="klikK1()">
+        <br>
+        <br>
+        <div class="blokje" id="K1B1"></div> <br>
+        <div class="blokje" id="K1B2"></div> <br>
+        <div class="blokje" id="K1B3"></div> <br>
+        <div class="blokje" id="K1B4"></div> <br>
+        <div class="blokje" id="K1B5"></div> <br>
+        <div class="blokje" id="K1B6"></div>
+    </div>
+
+    <div class="kolom" id="K2" onclick="klikK2()">
+        <br>
+        <br>
+        <div class="blokje" id="K2B1"></div> <br>
+        <div class="blokje" id="K2B2"></div> <br>
+        <div class="blokje" id="K2B3"></div> <br>
+        <div class="blokje" id="K2B4"></div> <br>
+        <div class="blokje" id="K2B5"></div> <br>
+        <div class="blokje" id="K2B6"></div>
+    </div>
+
+    <div class="kolom" id="K3" onclick="klikK3()">
+        <br>
+        <br>
         <div class="blokje"></div> <br>
         <div class="blokje"></div> <br>
         <div class="blokje"></div> <br>
@@ -39,7 +363,9 @@
         <div class="blokje"></div>
     </div>
 
-    <div class="kolom" id="2">
+    <div class="kolom" id="K4">
+        <br>
+        <br>
         <div class="blokje"></div> <br>
         <div class="blokje"></div> <br>
         <div class="blokje"></div> <br>
@@ -48,7 +374,9 @@
         <div class="blokje"></div>
     </div>
 
-    <div class="kolom" id="3">
+    <div class="kolom" id="K5">
+        <br>
+        <br>
         <div class="blokje"></div> <br>
         <div class="blokje"></div> <br>
         <div class="blokje"></div> <br>
@@ -57,7 +385,9 @@
         <div class="blokje"></div>
     </div>
 
-    <div class="kolom" id="4">
+    <div class="kolom" id="K6">
+        <br>
+        <br>
         <div class="blokje"></div> <br>
         <div class="blokje"></div> <br>
         <div class="blokje"></div> <br>
@@ -66,25 +396,9 @@
         <div class="blokje"></div>
     </div>
 
-    <div class="kolom" id="5">
-        <div class="blokje"></div> <br>
-        <div class="blokje"></div> <br>
-        <div class="blokje"></div> <br>
-        <div class="blokje"></div> <br>
-        <div class="blokje"></div> <br>
-        <div class="blokje"></div>
-    </div>
-
-    <div class="kolom" id="6">
-        <div class="blokje"></div> <br>
-        <div class="blokje"></div> <br>
-        <div class="blokje"></div> <br>
-        <div class="blokje"></div> <br>
-        <div class="blokje"></div> <br>
-        <div class="blokje"></div>
-    </div>
-
-    <div class="kolom" id="7">
+    <div class="kolom" id="K7">
+        <br>
+        <br>
         <div class="blokje"></div> <br>
         <div class="blokje"></div> <br>
         <div class="blokje"></div> <br>
