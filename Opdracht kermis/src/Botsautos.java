@@ -1,0 +1,4 @@
+
+class Botsautos extends Attractie {
+
+}
