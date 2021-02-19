@@ -6,4 +6,7 @@ Botsautos(){
     kassa = 0;
     kaartjes = 0;
 }
+void opstellingsKeuring(){
+}
+void kansSpelBelastingBetalen() {}
 }
