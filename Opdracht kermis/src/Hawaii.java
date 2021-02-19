@@ -1,8 +1,9 @@
 
 public class Hawaii extends Attractie {
 Hawaii(){
-	String naam = "Hawaii";
-	int prijs;
-	int oppervlakte;
+	naam = "Hawaii";
+	prijs = 2.90;
+	kassa = 0;
+	kaartjes = 0;
 }
 }

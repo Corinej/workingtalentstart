@@ -11,7 +11,10 @@ public class Demo {
 				+ "6 voor ladderklimmen\r\n"
 				+ "");
 		
-		kermis.draaien();
+		kermis.instappen();
+		
+		
+		kermis.tonen();
 	}
 
 }

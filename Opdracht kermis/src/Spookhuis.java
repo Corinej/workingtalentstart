@@ -1,8 +1,9 @@
 
 public class Spookhuis extends Attractie {
 Spookhuis(){
-	String naam = "Spookhuis";
-	int prijs;
-	int oppervlakte;
+ naam = "Spookhuis";
+ prijs = 3.20;
+ kassa = 0;
+ kaartjes = 0;
 }
 }

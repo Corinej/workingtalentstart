@@ -1,8 +1,9 @@
 
 public class Ladderklimmen extends Attractie {
 Ladderklimmen(){
-	String naam = "Ladderklimmen";
-	int prijs;
-	int oppervlakte;
+	naam = "Ladderklimmen";
+	prijs = 5;
+	kassa = 0;
+	kaartjes = 0;
 }
 }

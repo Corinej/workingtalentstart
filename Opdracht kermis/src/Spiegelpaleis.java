@@ -1,8 +1,9 @@
 
 public class Spiegelpaleis extends Attractie {
 Spiegelpaleis(){
-	String naam = "Spiegelpaleis";
-	int prijs;
-	int oppervlakte;
+	naam = "Spiegelpaleis";
+	prijs = 2.75;
+	kassa = 0;
+	kaartjes = 0;
 }
 }
